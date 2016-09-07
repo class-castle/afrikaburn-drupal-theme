@@ -221,8 +221,8 @@ FOOTER STRIP STYLES {CORRESPOND TO "01-variables-general-site-layout"}
 #footer {
   background: #450b14 none repeat center top;
 }
-#footer > h2 {
-  padding-bottom: 20px;
+#footer h2 {
+  padding-bottom: 15px;
 }
 #footer div.body-content {
   padding-bottom: 0;
@@ -248,6 +248,15 @@ FOOTER STRIP STYLES {CORRESPOND TO "01-variables-general-site-layout"}
 #footer ul li a:hover {
   color: #fff;
 }
+/*#copyright div.copyright-inner {
+	padding-left: 45px;
+	background: transparent url("../images/power_by.jpg") no-repeat left top;
+	
+}*/
+#copyright {
+  padding: 15px 0;
+  background: #360D14;
+}
 #copyright div.copyright-inner ul {
   font-size: 1em;
   margin-left: 0;
@@ -264,6 +273,7 @@ FOOTER STRIP STYLES {CORRESPOND TO "01-variables-general-site-layout"}
   font-family: "Open Sans", sans-serif;
   text-transform: none;
   font-size: 1.2em;
+  margin: 0;
 }
 #copyright div.copyright-inner a {
   color: #ffffff;
@@ -767,7 +777,7 @@ div.body-content input[type='checkbox'] {
   width: 20px !important;
   height: 20px !important;
   margin-right: 5px !important;
-  margin-top: -3px !important;
+  margin-top: 1px !important;
   margin-bottom: 0;
   float: left;
 }
@@ -775,7 +785,7 @@ div.body-content input[type='checkbox'] {
 div.radio-checkbox-wrapper {
   position: relative;
   float: left;
-  margin: -3px 5px 0 0;
+  margin: 1px 5px 0 0;
 }
 div.radio-checkbox-wrapper input[type='radio'],
 div.radio-checkbox-wrapper input[type='checkbox'] {
