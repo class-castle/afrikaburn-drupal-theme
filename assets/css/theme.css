@@ -218,16 +218,44 @@ div.sidebar-outer > div.sidebar {
 /*-----------------------------------------------------------------------
 FOOTER STRIP STYLES {CORRESPOND TO "01-variables-general-site-layout"}
 ------------------------------------------------------------------------*/
-div#footer-strip {
-  background: transparent none repeat center top;
+#footer {
+  background: #450b14 none repeat center top;
 }
-div.copyright-outer div.copyright-inner ul {
+#footer > h2 {
+  padding-bottom: 20px;
+}
+#footer div.body-content {
+  padding-bottom: 0;
+}
+#footer div.body-content h2 {
+  font-size: 1.06666667em;
+  line-height: 100%;
+  padding-bottom: 0.6em;
+}
+#footer ul {
+  list-style-image: url("../images/sep1.png");
+  border-top: 1px solid #961116;
+}
+#footer ul li {
+  border-bottom: 1px solid #961116;
+}
+#footer ul li a {
+  color: #f26c55;
+  text-decoration: none;
+  padding: 9px 0;
+  display: block;
+}
+#footer ul li a:hover {
+  color: #fff;
+}
+#copyright div.copyright-inner ul {
   font-size: 1em;
   margin-left: 0;
   margin-bottom: 0;
   width: 100%;
 }
-div.copyright-outer div.copyright-inner ul li {
+#copyright div.copyright-inner ul li,
+#copyright div.copyright-inner p {
   list-style: none;
   text-align: center;
   color: #ffffff;
@@ -237,11 +265,11 @@ div.copyright-outer div.copyright-inner ul li {
   text-transform: none;
   font-size: 1.2em;
 }
-div.copyright-outer div.copyright-inner ul li a {
+#copyright div.copyright-inner a {
   color: #ffffff;
   text-decoration: none;
 }
-div.copyright-outer div.copyright-inner ul li a:hover {
+#copyright div.copyright-inner a:hover {
   color: #000000;
   text-decoration: none;
 }
@@ -415,7 +443,7 @@ h2,
 h3,
 h4 {
   /*page-headers*/
-  color: #ffffff;
+  color: #f26c55;
   font-size: 2.8em;
   text-transform: uppercase;
   text-align: center;
@@ -453,7 +481,7 @@ div.body-content h2,
 div.body-content h3,
 div.body-content h4 {
   /*body-content-headers*/
-  color: #f26c55;
+  color: #ffffff;
   text-transform: uppercase;
   text-align: left;
   font-family: FuturaBook, Arial;
@@ -465,16 +493,16 @@ div.body-content h4 {
   background-color: transparent;
 }
 div.body-content h1 {
-  font-size: 1.71428571em;
+  font-size: 1.6em;
 }
 div.body-content h2 {
-  font-size: 1.57142857em;
+  font-size: 1.46666667em;
 }
 div.body-content h3 {
-  font-size: 1.42857143em;
+  font-size: 1.33333333em;
 }
 div.body-content h4 {
-  font-size: 1.28571429em;
+  font-size: 1.2em;
 }
 /*------------------------BODY CONTENT PARAGRAPH------------------------*/
 div.body-content {
@@ -483,7 +511,7 @@ div.body-content {
   color: #cccccc;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
-  font-size: 1.4em;
+  font-size: 1.5em;
   font-weight: 400;
   text-align: left;
 }
@@ -818,7 +846,7 @@ div.body-content table th {
   border-radius: 0px;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
-  font-size: 1em;
+  font-size: 0.93333333em;
 }
 div.body-content table td {
   color: #cccccc;
@@ -866,7 +894,7 @@ div.body-content blockquote {
   font-style: italic;
   font-weight: 600;
   color: inherit;
-  font-size: 1.21428571em;
+  font-size: 1.13333333em;
   margin: 1.5em 0;
   padding: 0;
   border-left-width: 0;
@@ -910,7 +938,7 @@ div.body-content hr {
   margin-top: 1em;
   margin-bottom: 1em;
   line-height: 150%;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 .no-follow {
   color: #cccccc;
@@ -967,7 +995,7 @@ span.form-required {
   max-width: 600px;
 }
 span.body-content-header-color {
-  color: #f26c55;
+  color: #ffffff;
 }
 .control-label span.optional {
   margin-left: 5px;
@@ -1733,7 +1761,7 @@ ul.autocompleter-choices {
   border-color: #cccccc;
   border-width: 2px;
   border-style: solid;
-  font-size: 1.4em;
+  font-size: 1.5em;
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -2340,7 +2368,7 @@ DEFAULT MENU MOBILE STYLES LEVEL 2
 }
 div.group-questionaire .form-wrapper {
   padding: 20px 0;
-  border-top: 1px solid #af282d;
+  border-top: 1px solid #961116;
   width: 100%;
 }
 div.form-wrapper .form-item.form-type-radio {
