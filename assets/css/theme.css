@@ -719,12 +719,12 @@ div.body-content textarea,
 div.body-content .uneditable-input {
   background-color: #ffffff;
   color: #333333;
-  border: 2px solid #af282d;
+  border: 2px solid #aaaaaa;
 }
 div.body-content input:hover,
 div.body-content .uneditable-input:hover,
 div.body-content textarea:hover {
-  border-color: #d93f27;
+  border-color: #af282d;
 }
 div.body-content input:focus,
 div.body-content input[type="text"]:focus,
@@ -751,7 +751,7 @@ div.body-content textarea:focus {
   -moz-box-shadow: inherit;
   box-shadow: inherit;
   outline: 0;
-  border-color: #d93f27;
+  border-color: #af282d;
   background-color: #e6cccf;
 }
 textarea,
@@ -815,6 +815,7 @@ input[type=checkbox] + div.radio-checkbox-dummy {
 input[type=radio]:hover + div.radio-checkbox-dummy,
 input[type=checkbox]:hover + div.radio-checkbox-dummy {
   border-color: #aaaaaa;
+  background-color: #e6cccf;
 }
 input[type=radio]:checked + div.radio-checkbox-dummy,
 input[type=checkbox]:checked + div.radio-checkbox-dummy {
@@ -824,16 +825,16 @@ input[type=checkbox]:checked + div.radio-checkbox-dummy {
 }
 div.body-content input[type=radio] + div.radio-checkbox-dummy,
 div.body-content input[type=checkbox] + div.radio-checkbox-dummy {
-  border-color: #af282d;
+  border-color: #aaaaaa;
 }
 div.body-content input[type=radio]:hover + div.radio-checkbox-dummy,
 div.body-content input[type=checkbox]:hover + div.radio-checkbox-dummy {
-  border-color: #d93f27;
+  border-color: #af282d;
 }
 div.body-content input[type=radio]:checked + div.radio-checkbox-dummy,
 div.body-content input[type=checkbox]:checked + div.radio-checkbox-dummy {
   background-position: center bottom -217px;
-  border-color: #d93f27;
+  border-color: #af282d;
   background-color: #962738;
 }
 div.body-content table {
@@ -2393,8 +2394,11 @@ div.form-wrapper .form-item > label {
   font-weight: 400;
 }
 .form-item .description {
-  line-height: 120%;
+  padding-left: 15px;
+  margin: 10px 0 10px 10px;
   margin-bottom: 1em;
+  border-left: 3px solid #f26c55;
+  color: #f26c55;
 }
 .form-radios + .description {
   margin-top: 10px;
