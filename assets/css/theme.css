@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600);
 /*---Site template files---*/
 /*------------------------------------------------------
 ALL PAGES BITS.LESS
@@ -88,7 +89,7 @@ html {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #af282d url("../images/body_bg.svg") no-repeat center top;
+  background: #2e1519 none no-repeat center top;
   margin: 0;
   padding: 0 0 0px 0;
   font-size: 62.5%;
@@ -109,8 +110,8 @@ NAVBAR- CAUSES PROBLEMS WITH MOBILE TRANSITION IN WEBKIT BROWSERS.
   border-width: 0;
   padding: 0;
 }
-div.wrapper {
-  background-color: #ffffff;
+div#wrapper {
+  background: #af282d url("../images/body_bg.svg") no-repeat center top;
 }
 .container-2 {
   max-width: 980px;
@@ -215,11 +216,33 @@ div.sidebar-outer > div.sidebar {
   background-color: #0d0d0d;
   border: 1px solid #0d0d0d;
 }
+div.sidebar-outer > div.sidebar {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+div.sidebar-outer > div.sidebar h2 {
+  color: #f26c55;
+  font-size: 1.2em;
+}
+div.sidebar-outer > div.sidebar aside > ul > li {
+  list-style: none;
+  padding: 5px 0 7px;
+  margin: 5px 0;
+  border-bottom: 1px solid #961116;
+}
+div.sidebar-outer > div.sidebar aside > ul > li li {
+  list-style: none;
+  padding: 0 0 0 5px;
+  margin: 0 0 0 5px;
+  font-size: 0.8em;
+  color: #f26c55;
+}
 /*-----------------------------------------------------------------------
 FOOTER STRIP STYLES {CORRESPOND TO "01-variables-general-site-layout"}
 ------------------------------------------------------------------------*/
 #footer {
-  background: #450b14 none repeat center top;
+  background: #111111 none repeat center top;
 }
 #footer h2 {
   padding-bottom: 15px;
@@ -255,7 +278,7 @@ FOOTER STRIP STYLES {CORRESPOND TO "01-variables-general-site-layout"}
 }*/
 #copyright {
   padding: 15px 0;
-  background: #360D14;
+  background: #2E1519;
 }
 #copyright div.copyright-inner ul {
   font-size: 1em;
@@ -766,7 +789,7 @@ div.body-content label {
   color: #cccccc;
   /*float: @body-content-form-label-float;*/
   font-weight: 400;
-  line-height: 100%;
+  line-height: 150%;
   font-family: "Open Sans", sans-serif;
   text-align: left;
 }
@@ -991,12 +1014,13 @@ div.body-content hr {
 .star,
 .asterisk,
 div.body-content .asterisk,
-span.form-required {
+span.form-required,
+div.body-content span.form-required {
   /*asterisk*/
   color: #f26c55;
   font-size: 25px;
   font-weight: 400;
-  line-height: 25px;
+  line-height: 15px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .transparent {
@@ -1069,70 +1093,40 @@ a.back-to-top-button span {
 a.back-to-top-button span:hover {
   cursor: pointer;
 }
-.moduletable.terms-of-use-bar {
-  background-color: transparent;
-  background-image: url("../images/overlays/black-overlay-80.png");
-  width: 100%;
-  float: left;
-  height: 30px;
-  border-top: 1px solid #222;
-  position: fixed;
-  bottom: 0;
-  z-index: 999999999;
-}
-.moduletable.terms-of-use-bar p {
-  font-size: 1.3em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  text-align: center;
-  line-height: 140%;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.moduletable.terms-of-use-bar p a {
-  text-decoration: underline;
-  color: #fff;
-}
-div.body-content .label.label-success,
-div.body-content .label.label-warning,
-div.body-content .label.label-important,
-div.body-content .label.label-info,
-div.body-content .label.label-inverse {
-  color: #fff;
-  padding: 8px;
-}
-a.void:hover {
-  cursor: default;
-}
 .body-content p img {
   margin-bottom: 0;
 }
+/*
 div.body-content span.wf_caption {
-  position: relative;
-  overflow: hidden;
+	position: relative;	
+	overflow: hidden;
 }
+
+
 div.body-content span.wf_caption > span {
-  line-height: 120%;
-  font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 10px 2%;
-  background: url("../images/overlays/black-overlay-75.png") repeat center top;
-  color: #fff;
-  text-align: left;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 96%;
+	line-height: 120%;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 10px 2%;
+	background: url("../images/overlays/black-overlay-75.png") repeat center top;
+	color: #fff;
+	text-align: left;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: block;
+	width: 96%;
 }
+
 #k2Container.itemView div.body-content span.wf_caption span img {
-  margin-bottom: 0;
+	margin-bottom: 0;	
 }
+
 div.body-content span.wf_caption a,
 div.body-content span.wf_caption a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
+	color: #fff;
+	text-decoration: underline;	
+}*/
 div.body-content iframe {
   border-width: 0;
 }
@@ -1264,22 +1258,6 @@ div.body-content ol li {
 .body-content blockquote p {
   font-size: 1em;
 }
-@media (min-width: 980px) {
-  .nav-collapse.collapse {
-    height: auto!important;
-    overflow: visible!important;
-  }
-  .btn.btn-navbar {
-    display: none;
-  }
-}
-.collapse {
-  position: relative;
-  -webkit-transition: height .35s ease;
-  -moz-transition: height .35s ease;
-  -o-transition: height .35s ease;
-  transition: height .35s ease;
-}
 .navbar .nav {
   position: relative;
   left: 0;
@@ -1300,9 +1278,6 @@ DESKTOP MAIN NAV CONTAINERS
 }
 .navbar {
   /*Set the contaning ribbon to the same height as this! Don't float this element- for a right or left aligned meny, float navbar inner*/
-  height: 50px;
-  background: #0d0d0d none repeat center top;
-  font-family: FuturaBook, Arial;
   font-size: 1em;
   margin-bottom: 0;
 }
@@ -1324,130 +1299,67 @@ DESKTOP MAIN NAV CONTAINERS
 /*--------------------------
 DESKTOP MAIN NAV LEVEL 1 UL
 --------------------------*/
-.navbar .navbar-inner .nav-collapse ul.menu,
-.navbar .navbar-inner .nav-collapse .moduletable ul.menu {
+.navbar .navbar-inner .nav-collapse aside > ul.menu {
   /*Never set height for this element.
 	Never set bottom border on this element*/
   border-width: 0;
   margin: 0;
+  padding-left: 0;
 }
 /*----------------------------
 DESKTOP MAIN NAV LEVEL 1 ITEMS
 ----------------------------*/
-.navbar .navbar-inner .nav-collapse ul.menu > li {
+.navbar .navbar-inner .nav-collapse aside > ul.menu > li {
   /*Never set bottom border on this element*/
-  border-left-color: #ffffff;
-  border-left-style: solid;
-  border-left-width: 0px;
   position: relative;
   line-height: 100%;
   font-size: 1em;
   margin: 0;
   padding: 0;
 }
-.navbar .navbar-inner .nav-collapse ul.menu li a,
-.navbar .navbar-inner .nav-collapse ul.menu li span.separator {
-  font-family: FuturaBook, Arial;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.7em;
-  color: #b04737;
-  text-transform: uppercase;
-  background-color: transparent;
-  height: 30px;
-  padding: 20px 15px 0;
-  min-width: 0px;
-  letter-spacing: 0.5px;
+.navbar .navbar-inner .nav-collapse aside > ul.menu li a,
+.navbar .navbar-inner .nav-collapse aside > ul.menu li span.separator {
   text-decoration: none;
   margin: 0;
   text-shadow: none;
   display: block;
 }
-.navbar .navbar-inner .nav-collapse ul.menu > li > a:focus,
-.navbar .navbar-inner .nav-collapse ul.menu > li > a:hover,
-.navbar .navbar-inner .nav-collapse ul.menu > li > span.separator:hover {
-  color: #f26c55;
-  background-color: #330b12;
+.navbar .navbar-inner .nav-collapse aside > ul.menu > li > a:focus,
+.navbar .navbar-inner .nav-collapse aside > ul.menu > li > a:hover,
+.navbar .navbar-inner .nav-collapse aside > ul.menu > li > span.separator:hover {
   cursor: pointer;
 }
-.navbar .navbar-inner .nav-collapse ul.menu > li > span.separator:hover {
+.navbar .navbar-inner .nav-collapse aside > ul.menu > li > span.separator:hover {
   cursor: default;
 }
-.navbar .navbar-inner .nav-collapse ul.menu > li > a.nav-menu-no-follow:focus,
-.navbar .navbar-inner .nav-collapse ul.menu > li > a.nav-menu-no-follow:hover {
-  cursor: default;
-  color: #b04737;
-  background-color: transparent;
-}
-.navbar .navbar-inner .nav-collapse ul.menu > .active > a,
-.navbar .navbar-inner .nav-collapse ul.menu > .active > span.separator {
+.navbar .navbar-inner .nav-collapse aside > ul.menu > .active > a,
+.navbar .navbar-inner .nav-collapse aside > ul.menu > .active > span.separator {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.navbar .navbar-inner .nav-collapse ul.menu > li.active > a:hover,
-.navbar .navbar-inner .nav-collapse ul.menu > li.active > a:focus,
-.navbar .navbar-inner .nav-collapse ul.menu > li.active > span.separator:hover {
+.navbar .navbar-inner .nav-collapse aside > ul.menu > li.active > a:hover,
+.navbar .navbar-inner .nav-collapse aside > ul.menu > li.active > a:focus,
+.navbar .navbar-inner .nav-collapse aside > ul.menu > li.active > span.separator:hover {
   cursor: default;
-  color: #f26c55;
-  background-color: #330b12;
 }
 /*------------------------------------------------
 DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
 ------------------------------------------------*/
-.navbar .navbar-inner .nav-collapse ul.menu-child {
-  position: absolute;
-  top: 50px;
-  border-color: #0000ff;
-  border-style: solid;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-top-width: 0px;
-  /*Keep bottom border to 0*/
-  border-bottom-width: 0;
-  min-width: 100%;
-  margin: 0 0 0 0px;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
+.navbar .navbar-inner .nav-collapse ul.menu ul.menu {
   padding: 0;
   list-style: none;
   background-color: transparent;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-background-clip: none;
-  -moz-background-clip: none;
-  background-clip: none;
-  font-size: 1em;
 }
-.navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li {
-  border-color: #0000ff;
-  border-style: solid;
-  border-width: 0 0 0px 0;
+.navbar .navbar-inner .nav-collapse ul.menu li ul.menu li {
   /*Keep top left and right border to 0*/
   padding: 0;
   margin: 0;
   font-size: 1em;
   line-height: 100%;
 }
-.navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li a,
-.navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li span.separator {
-  font-weight: 400;
-  font-style: #555555;
-  font-size: 1.7em;
-  color: #555555;
-  text-align: left;
-  text-transform: none;
-  background-color: #330b12;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 20px;
-  height: 30px;
+.navbar .navbar-inner .nav-collapse ul.menu li ul.menu li a,
+.navbar .navbar-inner .nav-collapse ul.menu li ul.menu li span.separator {
   text-decoration: none;
   display: block;
   clear: both;
@@ -1455,24 +1367,34 @@ DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
   white-space: nowrap;
   text-shadow: none;
   margin: 0;
-  min-width: 0px;
 }
-.navbar .navbar-inner .nav-collapse ul.menu > li:hover > .nav-child,
-.navbar .navbar-inner .nav-collapse ul.menu > li > a:focus + .nav-child {
+.navbar .navbar-inner .nav-collapse ul.menu > li:hover > ul.menu,
+.navbar .navbar-inner .nav-collapse ul.menu > li > a:focus + ul.menu {
   display: block;
 }
-.navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li > a:hover,
-.navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li > a:focus,
-.navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li > span.separator:hover {
+.navbar .navbar-inner .nav-collapse ul.menu li ul.menu li > a:hover,
+.navbar .navbar-inner .nav-collapse ul.menu li ul.menu li > a:focus,
+.navbar .navbar-inner .nav-collapse ul.menu li ul.menu li > span.separator:hover {
   text-decoration: none;
-  color: #222222;
-  background-color: #f3f3f3;
 }
 /*---adds the arrow to the current level 2 menu item---*/
-.navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active {
+.navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active {
   position: relative;
 }
 @media (min-width: 980px) {
+  .nav-collapse.collapse {
+    height: auto!important;
+    overflow: visible!important;
+  }
+  .navbar {
+    /*Set the contaning ribbon to the same height as this! Don't float this element- for a right or left aligned meny, float navbar inner*/
+    height: 50px;
+    background: #0d0d0d none repeat center top;
+    font-family: FuturaBook, Arial;
+  }
+  .btn.btn-navbar {
+    display: none;
+  }
   .navbar .navbar-inner {
     float: right;
     position: relative;
@@ -1482,6 +1404,25 @@ DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
     float: right;
     position: relative;
     right: -50%;
+  }
+  .navbar .navbar-inner .nav-collapse aside > ul.menu li a,
+  .navbar .navbar-inner .nav-collapse aside > ul.menu li span.separator {
+    font-family: FuturaBook, Arial;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.7em;
+    color: #b04737;
+    text-transform: uppercase;
+    background-color: transparent;
+    height: 30px;
+    padding: 20px 15px 0;
+    min-width: 0px;
+  }
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li > a:focus,
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li > a:hover,
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li > span.separator:hover {
+    color: #f26c55;
+    background-color: #330b12;
   }
   /*---Add border and colours to level 1 active menu item---*/
   .navbar .navbar-inner .nav-collapse ul.menu > .active > a,
@@ -1493,6 +1434,12 @@ DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
     border-top-style: solid;
     border-top-color: #f26c55;
   }
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li.active > a:hover,
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li.active > a:focus,
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li.active > span.separator:hover {
+    color: #f26c55;
+    background-color: #330b12;
+  }
   .navbar .navbar-inner .nav-collapse ul.menu > li.highlighted {
     border-bottom-width: 0px;
   }
@@ -1501,14 +1448,64 @@ DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
     color: #f26c55;
     background-color: #330b12;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu > li {
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li {
     text-align: center;
+    border-left-color: #ffffff;
+    border-left-style: solid;
+    border-left-width: 0px;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu > li {
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li {
     float: left;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active > span.separator,
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active > a {
+  /*------------------------------------------------
+	DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
+	------------------------------------------------*/
+  .navbar .navbar-inner .nav-collapse ul.menu ul.menu {
+    position: absolute;
+    top: 50px;
+    border-color: #0000ff;
+    border-style: solid;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    /*Keep bottom border to 0*/
+    border-bottom-width: 0;
+    min-width: 100%;
+    margin: 0 0 0 0px;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    font-size: 1em;
+  }
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li {
+    border-color: #0000ff;
+    border-style: solid;
+    border-width: 0 0 0px 0;
+  }
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li a,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li span.separator {
+    font-weight: 400;
+    font-style: #555555;
+    font-size: 1.7em;
+    color: #555555;
+    text-align: left;
+    text-transform: none;
+    background-color: #330b12;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    height: 30px;
+    min-width: 0px;
+  }
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li > a:hover,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li > a:focus,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li > span.separator:hover {
+    color: #222222;
+    background-color: #f3f3f3;
+  }
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > span.separator,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > a {
     color: #555555;
     background: #330b12 url(../images/buttons.png) no-repeat right 8px bottom -150px;
     background-size: 300px;
@@ -1517,49 +1514,49 @@ DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
     box-shadow: none;
     padding-right: 40px;
   }
-}
-.navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active div.mobile-active-1 {
-  background-color: transparent;
-  background-image: url(../images/buttons.png);
-  background-position: right 8px bottom -150px;
-  background-size: 300px;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 36px;
-}
-.navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active > a:hover,
-.navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active > a:focus,
-.navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active > span.separator:hover {
-  color: #222222;
-  background-color: #f3f3f3;
-  cursor: default;
-}
-/*--------------------------------------------
-REMOVE THE BORDER INDUCED ARROW FROM BOOTSTRAP
----------------------------------------------*/
-.navbar .nav-child:before {
-  position: absolute;
-  top: -7px;
-  left: 9px;
-  display: inline-block;
-  border-right: 0px solid transparent;
-  border-bottom: 0px solid #00738b;
-  border-left: 0px solid transparent;
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-  content: '';
-}
-.navbar .nav-child:after {
-  position: absolute;
-  top: -6px;
-  left: 10px;
-  display: inline-block;
-  border-right: 0px solid transparent;
-  border-bottom: 0px solid #00738b;
-  border-left: 0px solid transparent;
-  content: '';
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active div.mobile-active-1 {
+    background-color: transparent;
+    background-image: url(../images/buttons.png);
+    background-position: right 8px bottom -150px;
+    background-size: 300px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 36px;
+  }
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > a:hover,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > a:focus,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > span.separator:hover {
+    color: #222222;
+    background-color: #f3f3f3;
+    cursor: default;
+  }
+  /*--------------------------------------------
+	REMOVE THE BORDER INDUCED ARROW FROM BOOTSTRAP
+	---------------------------------------------*/
+  .navbar .nav-child:before {
+    position: absolute;
+    top: -7px;
+    left: 9px;
+    display: inline-block;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid #00738b;
+    border-left: 0px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    content: '';
+  }
+  .navbar .nav-child:after {
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    display: inline-block;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid #00738b;
+    border-left: 0px solid transparent;
+    content: '';
+  }
 }
 .moduletable.user-greeting {
   float: right;
@@ -2032,6 +2029,13 @@ div.tip-wrap {
   margin-top: -1px;
 }
 @media (max-width: 979px) {
+  .collapse {
+    position: relative;
+    -webkit-transition: height .35s ease;
+    -moz-transition: height .35s ease;
+    -o-transition: height .35s ease;
+    transition: height .35s ease;
+  }
   div.navbar-outer {
     background-color: #008000;
   }
@@ -2098,15 +2102,14 @@ div.tip-wrap {
   /*---------------------------------------------
 DEFAULT MENU MOBILE STYLES LEVEL 1 
 ---------------------------------------------*/
-  .navbar .navbar-inner .nav-collapse > ul.menu,
-  .navbar .navbar-inner .nav-collapse .moduletable > ul.menu {
+  .navbar .navbar-inner .nav-collapse > ul.menu {
     margin: 0;
     border-top: 0;
     border-right: 0;
     border-left: 0;
     border-bottom: 1px solid #000000;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu > li {
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li {
     border-top-color: #000000;
     border-top-width: 1px;
     border-top-style: solid;
@@ -2114,8 +2117,8 @@ DEFAULT MENU MOBILE STYLES LEVEL 1
     border-bottom: 0;
     border-left: 0;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu > li > a,
-  .navbar .navbar-inner .nav-collapse ul.menu > li > span.separator {
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li > a,
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li > span.separator {
     /*Leave font weight and font family here to override bootstrap*/
     font-family: FuturaBook, Arial;
     font-weight: 400;
@@ -2134,27 +2137,27 @@ DEFAULT MENU MOBILE STYLES LEVEL 1
     border-radius: 0px;
     padding-bottom: 0;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu > li > a:hover,
-  .navbar .navbar-inner .nav-collapse ul.menu > li > span.separator:hover {
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li > a:hover,
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li > span.separator:hover {
     color: #b04737;
     text-transform: uppercase;
     background-color: #330b12;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu > li.active > a,
-  .navbar .navbar-inner .nav-collapse ul.menu > li.active > span.separator {
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li.active > a,
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li.active > span.separator {
     color: #ffffff;
     background-color: #330b12;
     background-image: none;
     border-width: 0;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu > li.active > a:hover,
-  .navbar .navbar-inner .nav-collapse ul.menu > li.active > a:focus,
-  .navbar .navbar-inner .nav-collapse ul.menu > li.active > span.separator:hover {
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li.active > a:hover,
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li.active > a:focus,
+  .navbar .navbar-inner .nav-collapse aside > ul.menu > li.active > span.separator:hover {
     color: #ffffff;
     background-color: #330b12;
     cursor: default;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active.current > a {
+  .navbar .navbar-inner .nav-collapse aside > ul.menu li ul.menu li.active.current > a {
     background-image: url(../images/buttons.png);
     background-repeat: no-repeat;
     background-position: right 10px bottom -155px;
@@ -2163,7 +2166,7 @@ DEFAULT MENU MOBILE STYLES LEVEL 1
   /*---------------------------------------------
 DEFAULT MENU MOBILE STYLES LEVEL 2
 ---------------------------------------------*/
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child {
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu {
     position: static;
     top: auto;
     left: auto;
@@ -2186,44 +2189,44 @@ DEFAULT MENU MOBILE STYLES LEVEL 2
     -moz-background-clip: padding;
     background-clip: padding-box;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li {
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li {
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: #000000;
     border-bottom: 0;
     position: relative;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li a,
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li span.separator {
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li a,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li span.separator {
     font-family: FuturaBook, Arial;
     height: 23px;
     color: #ffffff;
     font-size: 1.7em;
     text-transform: uppercase;
-    background-color: #aaaaaa;
+    background-color: #ffff00;
     padding-left: 40px;
     padding-top: 17px;
     padding-bottom: inherit;
     padding-bottom: 0;
     text-align: left;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li > a:hover,
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li > a:focus,
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li > span.separator:hover,
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child:hover > a {
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li > a:hover,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li > a:focus,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li > span.separator:hover,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu:hover > a {
     color: #ffffff;
-    background-color: #aaaaaa;
+    background-color: #ffff00;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active > a,
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active > span.separator {
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > a,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > span.separator {
     color: #ffffff;
-    background-color: #aaaaaa;
+    background-color: #ffff00;
   }
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active > a:hover,
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active > a:focus,
-  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu-child li.active > span.separator:hover {
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > a:hover,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > a:focus,
+  .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > span.separator:hover {
     color: #ffffff;
-    background-color: #aaaaaa;
+    background-color: #ffff00;
   }
   .navbar div.mobile-active-1 {
     background-color: transparent;
@@ -2374,6 +2377,18 @@ DEFAULT MENU MOBILE STYLES LEVEL 2
     padding-top: 20px 10px 20px;
   }
 }
+fieldset {
+  border-width: 0;
+  margin: 0;
+  padding: 0;
+}
+div.fieldset-wrapper {
+  margin: 0;
+  padding: 0;
+}
+fieldset.date-combo .container-inline-date .date-padding {
+  padding: 0;
+}
 .form-item {
   margin: 0 0 10px 0;
 }
@@ -2415,9 +2430,17 @@ div.body-content input.field-add-more-submit {
   max-width: 400px;
 }
 div.body-content table.field-multiple-table,
-div.body-content table.field-multiple-table,
+div.body-content table.field-multiple-table thead,
+div.body-content table.field-multiple-table tbody,
 div.body-content table.field-multiple-table tr,
 div.body-content table.field-multiple-table td {
+  width: 100%;
+  display: block;
+}
+div.body-content table.field-multiple-table,
+div.body-content table.field-multiple-table tr,
+div.body-content table.field-multiple-table td,
+div.body-content table.field-multiple-table tbody {
   border-width: 0;
   padding: 0;
 }
@@ -2530,12 +2553,12 @@ a.user-link:hover {
   cursor: pointer;
   text-decoration: none;
 }
-div.sidebar {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-}
 @media (max-width: 979px) {
+  div.logo-container {
+    width: 39%;
+    left: inherit;
+    right: 10px;
+  }
   div#top-bar {
     height: 50px;
   }

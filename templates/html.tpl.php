@@ -40,6 +40,7 @@
  * @see template_preprocess_html()
  * @see template_process()
  */
+
 ?><!DOCTYPE HTML>
 <html>
 <head profile="<?php print $grddl_profile; ?>">

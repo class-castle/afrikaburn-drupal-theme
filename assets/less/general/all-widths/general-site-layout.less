@@ -31,8 +31,8 @@ NAVBAR- CAUSES PROBLEMS WITH MOBILE TRANSITION IN WEBKIT BROWSERS.
 	padding: 0;
 }
 
-div.wrapper {
-	background-color: @wrapper-background-color;
+div#wrapper {
+	background: @wrapper-background-color @wrapper-background-image @wrapper-background-repeat @wrapper-background-position;
 }	
 
 .container-2  {
@@ -167,6 +167,31 @@ div.sidebar-outer > div.sidebar {
 	border: @sidebar-box-border-width @sidebar-box-border-style @sidebar-box-border-color;
 }
 
+div.sidebar-outer > div.sidebar  {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+div.sidebar-outer > div.sidebar h2 {
+	color: #f26c55;
+	font-size: 1.8em/@body-content-text-font-size;
+}
+
+div.sidebar-outer > div.sidebar aside > ul > li {
+	list-style: none;
+	padding: 5px 0 7px;
+	margin: 5px 0;
+	border-bottom: 1px solid #961116;
+}
+
+div.sidebar-outer > div.sidebar aside > ul > li li {
+	list-style: none;
+	padding: 0 0 0 5px;
+	margin: 0 0 0 5px;
+	font-size: 0.8em;
+	color: #f26c55;
+}
 
 /*-----------------------------------------------------------------------
 FOOTER STRIP STYLES {CORRESPOND TO "01-variables-general-site-layout"}
@@ -219,7 +244,7 @@ FOOTER STRIP STYLES {CORRESPOND TO "01-variables-general-site-layout"}
 
 #copyright {
 	padding: 15px 0;
-	background: #360D14;
+	background: #2E1519;
 }
 
 #copyright div.copyright-inner ul {

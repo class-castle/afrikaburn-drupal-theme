@@ -65,7 +65,44 @@
  * @see template_preprocess_page()
  * @see template_process()
  */
+    function afrikaburn_css_alter(&$css) {
+            // Remove defaults.css file.
+            //unset($css['misc/ui/jquery.ui.core.css']);
+            //unset($css['misc/ui/jquery.ui.core.css']);
+            //unset($css['misc/ui/jquery.ui.theme.css']);
+            //unset($css['misc/ui/jquery.ui.datepicker.css']);
+            unset($css['modules/system/system.base.css']);
+            unset($css['modules/system/system.base.css']);
+            unset($css['modules/system/system.menus.css']);
+            unset($css['modules/system/system.messages.css']);
+            unset($css['modules/system/system.theme.css']);
+            unset($css['modules/overlay/overlay-parent.css']);
+            unset($css['modules/comment/comment.css']);
+            unset($css['modules/field/theme/field.css']);
+            unset($css['modules/node/node.css']);
+            unset($css['modules/search/search.css']);
+            unset($css['modules/user/user.css']);
+            unset($css['modules/shortcut/shortcut.css']);
+            unset($css['modules/toolbar/toolbar.css']);
+            unset($css['modules/poll/poll.css']);
+            unset($css['modules/forum/forum.css']);
+            unset($css['modules/file/file.css']);
+            unset($css['modules/image/image.css']);
+            unset($css['sites/all/modules/ctools/css/ctools.css']);
+            unset($css['sites/all/modules/panels/css/panels.css']);
+            unset($css['sites/all/modules/toolbar_hide/toolbar_hide.css']);
+            unset($css['sites/all/modules/date/date_api/date.css']); 
+            unset($css['sites/all/modules/date/date_popup/themes/datepicker.1.7.css']);
+            unset($css['sites/all/modules/date/date_repeat_field/date_repeat_field.css']);
+            unset($css['sites/all/modules/livethemer/css/livethemer.css']);
+            unset($css['sites/all/modules/logintoboggan/logintoboggan.css']);
+            unset($css['sites/all/modules/views/css/views.css']);
+            unset($css['sites/all/modules/date/date_popup/themes/jquery.timeentry.css']);
+            unset($css['sites/all/modules/ckeditor/css/ckeditor.css']);
+            unset($css['sites/all/modules/field_group/field_group.field_ui.css']);
+        }
 global $user;
+
 ?>
 
  <div id="top-bar">
@@ -99,9 +136,7 @@ global $user;
                               <span class="icon-bar"></span>
                               </a>
                               <div class="nav-collapse collapse" id="main-nav">
-                                <?php if($main_menu): ?>
-                                    <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('menu', 'links', 'inline', 'clearfix')))); ?>
-                                <?php endif; ?>
+                                <?php print render($page['main-menu']); ?>
                             </div>
                         </div>
                       </div>
@@ -161,9 +196,7 @@ global $user;
                       <div class="navbar-inner">
                           <div class="container-fluid">
                               <div class="nav-collapse collapse" id="main-nav">
-                                <?php if($main_menu): ?>
-                                    <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('menu', 'links', 'inline', 'clearfix')))); ?>
-                                <?php endif; ?>
+                                <?php print render($page['main-menu']); ?>
                             </div>
                         </div>
                       </div>

@@ -11,6 +11,8 @@
 
 }
 
+
+
 a:active,
 a:focus {
     outline: none;
@@ -438,7 +440,7 @@ div.body-content label {
 	color: @body-content-form-label-color;
 	/*float: @body-content-form-label-float;*/
 	font-weight: @body-content-form-label-font-weight;
-	line-height: 100%;
+	line-height: 150%;
 	font-family: @main-font-family;
 	text-align: left;	
 }
@@ -716,12 +718,13 @@ div.body-content hr {
 .star,
 .asterisk,
 div.body-content .asterisk,
-span.form-required {
+span.form-required,
+div.body-content span.form-required {
 	/*asterisk*/
 	color: @general-asterisk-color;	
 	font-size: @general-asterisk-font-size;
 	font-weight: @general-asterisk-font-weight;
-	line-height: @general-asterisk-font-size;
+	line-height: @general-asterisk-font-size - 10px;
 	font-family: Arial, Helvetica, sans-serif;
 	
 }
@@ -810,51 +813,10 @@ a.back-to-top-button span:hover {
 	cursor: pointer;
 }
 
-.moduletable.terms-of-use-bar {
-	background-color: transparent;
-	background-image: url("../images/overlays/black-overlay-80.png");
-	width: 100%;
-	float: left;
-	height: 30px;
-	border-top: 1px solid #222;
-	position: fixed;
-	bottom: 0;
-	z-index: 999999999;	
-}
-
-
-.moduletable.terms-of-use-bar p {
-	font-size: 1.3em;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	text-align: center;	
-	line-height: 140%;
-	color: #fff;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.moduletable.terms-of-use-bar p a {
-	text-decoration: underline;
-	color: #fff;
-}
-div.body-content .label.label-success,
-div.body-content .label.label-warning,
-div.body-content .label.label-important,
-div.body-content .label.label-info,
-div.body-content .label.label-inverse
-  {
-	color: #fff;
-	padding: 8px;	
-}
-
-a.void:hover {
-	cursor: default;	
-}
-
 .body-content p img {
 	margin-bottom: 0;
 }
-
+/*
 div.body-content span.wf_caption {
 	position: relative;	
 	overflow: hidden;
@@ -884,7 +846,7 @@ div.body-content span.wf_caption a,
 div.body-content span.wf_caption a:hover {
 	color: #fff;
 	text-decoration: underline;	
-}
+}*/
 
 div.body-content iframe {
 	border-width: 0;	
