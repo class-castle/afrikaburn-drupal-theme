@@ -116,7 +116,7 @@ global $user;
             </div>
                <?php
                     if (!$logged_in) {
-                        echo "<a class='user-link' href='user/login'>Login</a>";
+                        echo "<a class='user-link' href='/user/login'>Login</a>";
                     } else {
                         echo "<a class='user-link logout' href='/user/logout'>Logout</a>";
                     }

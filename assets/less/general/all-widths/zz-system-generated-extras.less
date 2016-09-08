@@ -3,7 +3,7 @@ SYSTEM MESSAGE STYLES
 -------------------*/
 
 div.messages {
-	padding-left: 45px;
+	padding: 15px 15px 15px 45px;
 	margin-bottom: 20px;
 	position: relative;
 	line-height: @body-content-text-line-height;
@@ -16,11 +16,26 @@ div.messages {
 	
 }
 
+div.messages .element-invisible {
+	display: none;
+}
+
+div.messages,
 div.messages p,
 div.messages ul li {
 	font-size: 1em;
-	color: #000;
+	color: #eee;
 	text-align: left;	
+}
+
+div.messages a {
+	color: #fff;
+	font-weight: 600;
+}
+
+div.messages a:hover {
+	color: #111;
+	text-decoration: underline;
 }
 
 div.messages {
@@ -32,18 +47,18 @@ div.messages {
 }
 
 div.messages.error {
-	background-color: #ffaaaa;
+	background-color: #e85157;
 	border: 2px solid #802727;
 }
 
 div.messages.warning {
-	background-color: #FFD862;
+	background-color: #E0A72B;
 	border: 2px solid #D29E00;
 }
 
 div.messages.status  {
 	border: 2px solid #23783D;
-	background-color: #7CD898;
+	background-color: #4DA87D;
 }
 
 /*----------------------

@@ -1,4 +1,4 @@
-/*---BOOTSTRAP OVERRIDES---*/
+/*---Fonts---*/
 @font-face {
     font-family: 'FuturaBook';
     src: url('../fonts/futura_book_bt-webfont.eot');
@@ -11,13 +11,11 @@
 
 }
 
-
-
+/*---Change default user agent behaviour---*/
 a:active,
 a:focus {
     outline: none;
 }
-
 
 select:focus {
 	outline:inherit;
@@ -31,35 +29,11 @@ select:focus {
 	transition:inherit
 }
 
-.table-bordered,
-.table-bordered thead:first-child tr:first-child > th:first-child,
-.table-bordered tbody:first-child tr:first-child > td:first-child,
-.table-bordered tbody:first-child tr:first-child > th:first-child,
-.table-bordered thead:first-child tr:first-child > th:last-child,
-.table-bordered tbody:first-child tr:first-child > td:last-child,
-.table-bordered tbody:first-child tr:first-child > th:last-child,
-.table-bordered thead:last-child tr:last-child > th:first-child,
-.table-bordered tbody:last-child tr:last-child > td:first-child,
-.table-bordered tbody:last-child tr:last-child > th:first-child,
-.table-bordered tfoot:last-child tr:last-child > td:first-child,
-.table-bordered tfoot:last-child tr:last-child > th:first-child,
-.table-bordered thead:last-child tr:last-child > th:last-child,
-.table-bordered tbody:last-child tr:last-child > td:last-child,
-.table-bordered tbody:last-child tr:last-child > th:last-child,
-.table-bordered tfoot:last-child tr:last-child > td:last-child,
-.table-bordered tfoot:last-child tr:last-child > th:last-child {
-  -webkit-border-radius: 0px;
-  border-radius: 0px;
-  -moz-border-radius: 0px;
+fieldset {
+	border-width: 0;
+	margin: 0;
+	padding: 0;
 }
-
-
-input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
-		box-shadow: none;
-}
-
-
-
 
 form {
 	 margin-bottom: inherit;

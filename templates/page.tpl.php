@@ -71,11 +71,12 @@
         //unset($css['misc/ui/jquery.ui.core.css']);
         //unset($css['misc/ui/jquery.ui.theme.css']);
         //unset($css['misc/ui/jquery.ui.datepicker.css']);
-        unset($css['modules/system/system.base.css']);
+
         unset($css['modules/system/system.base.css']);
         unset($css['modules/system/system.menus.css']);
         unset($css['modules/system/system.messages.css']);
         unset($css['modules/system/system.theme.css']);
+        
         unset($css['modules/overlay/overlay-parent.css']);
         unset($css['modules/comment/comment.css']);
         unset($css['modules/field/theme/field.css']);
@@ -88,6 +89,7 @@
         unset($css['modules/forum/forum.css']);
         unset($css['modules/file/file.css']);
         unset($css['modules/image/image.css']);
+
         unset($css['sites/all/modules/ctools/css/ctools.css']);
         unset($css['sites/all/modules/panels/css/panels.css']);
         unset($css['sites/all/modules/toolbar_hide/toolbar_hide.css']);
@@ -112,7 +114,7 @@
                 </div>
                 <?php
                    if (!$logged_in) {
-                       echo "<a class='user-link' href='user/login'>Login</a>";
+                       echo "<a class='user-link' href='/user/login'>Login</a>";
                    } else {
                        echo "<a class='user-link logout' href='/user/logout'>Logout</a>";
                    }

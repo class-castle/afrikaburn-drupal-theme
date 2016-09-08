@@ -27,6 +27,14 @@
 		
 	}
 
+	
+
+	.navbar .navbar-inner .nav-collapse aside > ul.menu > li {
+		float: left;
+		
+	}
+
+
 	.navbar .navbar-inner .nav-collapse aside > ul.menu li a,
 	.navbar .navbar-inner .nav-collapse aside > ul.menu li span.separator {
 		font-family: @pc-main-nav-font-family;
@@ -38,7 +46,7 @@
 		background-color: @pc-main-nav-level-1-item-background-color;
 		height: @pc-main-nav-level-1-item-height - @pc-main-nav-level-1-item-padding-top;
 		padding: @pc-main-nav-level-1-item-padding-top @pc-main-nav-item-padding-left-right 0;
-		min-width: @pc-main-nav-level-1-item-min-width - 2*@pc-main-nav-level-1-item-border-left-right-width;
+		min-width: @pc-main-nav-level-1-item-min-width;
 	}
 
 	.navbar .navbar-inner .nav-collapse aside > ul.menu > li > a:focus, 
@@ -78,16 +86,6 @@
 
 	}
 
-	.navbar .navbar-inner .nav-collapse aside > ul.menu > li {
-		text-align: @pc-main-nav-level-1-item-text-align;
-		border-left-color: @pc-main-nav-level-1-item-border-color;
-		border-left-style: @pc-main-nav-level-1-item-border-style;
-		border-left-width: @pc-main-nav-level-1-item-border-left-right-width;
-	}
-
-	.navbar .navbar-inner .nav-collapse aside > ul.menu > li {
-		float: left;
-	}
 
 	/*------------------------------------------------
 	DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
@@ -96,26 +94,13 @@
 	.navbar .navbar-inner .nav-collapse ul.menu ul.menu {
 		position: absolute;
 		top: @pc-main-nav-bar-height;
-		border-color: @pc-main-nav-level-2-item-border-color;
-		border-style: @pc-main-nav-level-2-item-border-style;
-		border-left-width: @pc-main-nav-level-2-item-border-left-right-width;
-		border-right-width: @pc-main-nav-level-2-item-border-left-right-width;
-		border-top-width: @pc-main-nav-level-2-item-border-top-bottom-width;
-		/*Keep bottom border to 0*/
-		border-bottom-width: 0;
 		min-width: 100%;
-		margin: 0 0 0 -1*@pc-main-nav-level-2-item-border-left-right-width;
+		margin: 0;
 		left: 0;
 		z-index: 1000;
 		display: none;
 		float: left;
 		font-size: 1em;
-	}
-
-	.navbar .navbar-inner .nav-collapse ul.menu li ul.menu li {
-		border-color: @pc-main-nav-level-2-item-border-color;
-		border-style: @pc-main-nav-level-2-item-border-style;
-		border-width: 0 0 @pc-main-nav-level-2-item-border-top-bottom-width 0;
 	}
 
 	.navbar .navbar-inner .nav-collapse ul.menu li ul.menu li a,
@@ -131,7 +116,7 @@
 		padding-right: @pc-main-nav-item-padding-left-right;
 		padding-top: @pc-main-nav-level-2-item-padding-top;
 		height: @pc-main-nav-level-2-item-height - @pc-main-nav-level-2-item-padding-top;
-		min-width: @pc-main-nav-level-2-item-min-width - 2*@pc-main-nav-level-1-item-border-left-right-width;
+		min-width: @pc-main-nav-level-2-item-min-width;
 	}
 
 	.navbar .navbar-inner .nav-collapse ul.menu li ul.menu li > a:hover, 
