@@ -82,7 +82,6 @@ DEFAULT INTERFACE ELEMENT STYLES
 @general-input-border-width: 2px;
 @general-input-border-style: solid;
 @general-input-height: 34px;
-@general-input-padding: 0;
 @general-input-font-family: @main-font-family; 
 @general-input-font-style: normal;
 @general-input-text-transform: none;
@@ -92,7 +91,7 @@ DEFAULT INTERFACE ELEMENT STYLES
 @general-input-margin-top: 5px;
 @general-input-margin-bottom: 5px;
 @general-input-width: 100%;
-@general-input-side-padding: 0px;
+@general-input-side-padding: 15px;
 @general-input-top-bottom-padding: 2px;
 @general-input-border-radius: 5px;
 @general-input-float: left;
@@ -108,16 +107,17 @@ DEFAULT INTERFACE ELEMENT STYLES
 @body-content-input-border-color: #aaa;
 @body-content-input-background-color: #fff;
 
-@body-content-input-hover-border-color: #af282d;
-@body-content-input-focus-border-color: #af282d;
-@body-content-input-focus-background-color: #e6cccf;
+@body-content-input-hover-border-color: #f26c55;
+@body-content-input-focus-border-color: #f26c55;
+@body-content-input-focus-background-color: #F5E6E4;
 
 @radio-button-checkbox-margin-top: 1px;
 @radio-button-checkbox-background-color: #fff;
-@radio-button-checkbox-hover-background-color: #e6cccf;
-@radio-checkbox-selected-background-color: #962738;
+@radio-button-checkbox-hover-background-color: #f26c55;
+@radio-checkbox-selected-background-color: #f26c55;
 @radio-button-checkbox-width-height: 20px;
-@radio-checkbox-selected-background-position: center bottom -217px;
+@radio-checkbox-selected-background-position: center -152px;
+@radio-buttons-checkbox-background-image: url("../images/afrikaburn-icons.png");
 
 @general-button-background-color: #000;
 @general-button-hover-background-color: #191919;
@@ -129,8 +129,6 @@ DEFAULT INTERFACE ELEMENT STYLES
 @general-button-font-family: FuturaBook, Arial;
 @general-button-font-weight: 400;
 @general-button-side-padding: 20px;
-@general-button-background-image: url(../images/buttons.png);
-@general-button-background-size: 300px;
 @general-button-height: 45px;
 @general-button-max-width: 400px;
 @general-button-min-width: 200px;
@@ -144,25 +142,6 @@ DEFAULT INTERFACE ELEMENT STYLES
 @general-button-background-position: center top;
 @general-button-background-repeat: repeat;
 @general-button-margin: 5px;
-
-@button-login-background-position: center -10px;
-@button-login-hover-background-position: @button-login-background-position;
-@button-logout-background-position: center -60px;
-@button-logout-hover-background-position: @button-logout-background-position;
-@button-send-background-position: center -110px;
-@button-send-hover-background-position: @button-send-background-position;
-@button-reset-background-position: center -160px;
-@button-reset-hover-background-position: @button-reset-background-position;
-@button-submit-background-position: center -210px;
-@button-submit-hover-background-position: @button-submit-background-position;
-@button-subscribe-background-position: center -260px;
-@button-subscribe-hover-background-position: @button-subscribe-background-position;
-@button-cancel-background-position: center -310px;
-@button-cancel-hover-background-position: @button-cancel-background-position;
-@button-attach-background-position: center -360px;
-@button-attach-hover-background-position: @button-attach-background-position;
-@button-search-background-position: left 48% bottom -58px;
-@button-search-hover-background-position: @button-search-background-position;
 
 /*----------------------------------------------------------------
 FOOTER STRIP TEXT STYLES {CORRESPOND TO "02-bits-and-pieces.less"}
@@ -228,8 +207,6 @@ TABLE STYLES
 @interface-text-font-size: 1.2em; 
 @interface-text-font-family: Arial, Helvetica, sans-serif;
 
-
-
 @blockquote-background-color: transparent;
 @blockquote-font-style: italic;
 @blockquote-font-weight: 600;
@@ -237,16 +214,16 @@ TABLE STYLES
 @blockquote-font-size: 1.7em;
 
 @back-to-top-button-background-color: #000;
-@back-to-top-button-height: 36px;
-@back-to-top-button-width: 36px;
+@back-to-top-button-height: 30px;
+@back-to-top-button-width: 30px;
 @back-to-top-button-padding: 3px;
 @back-to-top-button-opacity: 0.5;
 @back-to-top-button-bottom-position: 20px;
 @back-to-top-button-right-position: 20px;
-@back-to-top-button-background-image: @general-button-background-image;
-@back-to-top-button-background-position: center bottom -5px;
-@back-to-top-button-background-size: @general-button-background-size;
-@back-to-top-button-border-radius: 42px;
+@back-to-top-button-background-image: url("../images/afrikaburn-icons.png");
+@back-to-top-button-background-position: right 4px top -42px;
+@back-to-top-button-background-size: @icons-sprite-background-size;
+@back-to-top-button-border-radius: 5px;
 @back-to-top-button-border-width: 2px;
 @back-to-top-button-border-style: solid;
 @back-to-top-button-border-color: #fff;
@@ -280,4 +257,4 @@ TABLE STYLES
 @pinterest-link-hover-background-position: @pinterest-link-background-position;
 @login-block-remember-me-text-color: #999;
 
-@add-bootstrap-menu-button-in-template-less: yes;
+@icons-sprite-background-size: 200px;

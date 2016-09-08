@@ -1,5 +1,3 @@
-
-
 div.banners {
 	position: relative;
 }
@@ -51,6 +49,8 @@ div#header {
 	height: auto;
 }
 
+
+
 #main-content-strip div.container-2 {
 	background: #450b14 url("../images/content_bg.jpg") no-repeat center top;
 }
@@ -87,8 +87,19 @@ a.user-link:hover {
 	text-decoration: none;
 }
 
-@media (min-width: 980px) {
+input,
+textarea,
+div.body-content input,
+div.body-content textarea {
+	background-image: url("../images/paper-bg.png");
+	background-repeat: repeat;
+}
 
+@media (min-width: 980px) {
+	#main-content-strip {
+		margin-bottom: 36px;
+	}
+	
 	.navbar .navbar-inner .nav-collapse aside > ul.menu > li {
 		padding-top: 4px;
 		padding-bottom: 4px;
@@ -139,5 +150,10 @@ a.user-link:hover {
 	a.user-link {
 		float: left;
 		margin-left: 62px;
+	}
+
+	div.sidebar-outer,
+	section#footer {
+		display: none;
 	}
 }

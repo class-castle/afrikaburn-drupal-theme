@@ -77,6 +77,8 @@ $(document).ready(function() {
 	$(".login-box").click(function(e) {
 	    e.stopPropagation();
 	});
+
+	$("div.messages").prepend("<span class='icon'></span>");
 });
 
 

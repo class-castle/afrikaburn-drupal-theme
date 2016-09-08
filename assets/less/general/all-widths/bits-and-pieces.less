@@ -160,36 +160,6 @@ div.body-content p {
 	margin-bottom: @body-content-paragraph-space-after;
 }	
 
-/*button,
-div.body-content button,
-input.button,
-div.body-content input.button,
-.btn,
-div.body-content .btn,
-.btn-primary,
-div.body-content .btn-primary,
-a.btn,
-div.body-content a.btn {
-	width: @general-button-width;
-	max-width: @general-button-max-width;
-	background: @general-button-background-color @general-button-background-image @general-button-background-repeat @general-button-background-position;
-	*background-color: @general-button-background-color;
-	background-size: @general-button-background-size;
-	height: @general-button-height;
-	border: @general-button-border-width @general-button-border-style @general-button-border-color;
-	border-radius: @general-button-border-radius;
-	-moz-border-radius: @general-button-border-radius;
-	-webkit-border-radius: @general-button-border-radius;
-	box-shadow: none;
-	color: transparent;
-	font-size: 0;
-	cursor: pointer;
-	float: left;
-	display: block;
-	padding: 0;
-	box-sizing: border-box;	
-}*/
-
 button,
 .button,
 input.button,
@@ -201,7 +171,7 @@ input[type=submit],
 div.body-content input[type=submit] {
 	max-width: @general-button-max-width;
 	min-width: @general-button-min-width;
-	background-color: @general-button-background-color; /*@general-button-background-image no-repeat @general-button-background-position;*/
+	background-color: @general-button-background-color;
 	*background-color: @general-button-background-color;
 	height: @general-button-height;
 	border-width: 0;
@@ -241,9 +211,7 @@ div.body-content a.btn:hover,
 div.input-file-wrapper:hover,
 input[type=submit]:hover,
 div.body-content input[type=submit]:hover  {
-	
-	background: @general-button-hover-background-color @general-button-background-image @general-button-background-repeat @general-button-background-position;
-	background-size: @general-button-background-size;
+	background: @general-button-hover-background-color;
 	height: @general-button-height;
 	color: @general-button-hover-color;
 	cursor: pointer;
@@ -277,8 +245,7 @@ div.body-content select {
 	background-color: #f5f5f5;
     background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
 	font-family: Arial, Helvetica, sans-serif;
-	/*clear: both;
-	float: left;*/
+	display: block;
 	margin-top: 10px;
 }
 
@@ -327,12 +294,16 @@ div.body-content .uneditable-input  {
 	margin-bottom: @general-input-margin-bottom;
 	width: @general-input-width;
 	padding: @general-input-top-bottom-padding @general-input-side-padding;
-	/*float: @general-input-float;*/
-	text-indent: 8px;
 	box-sizing: border-box;
 	background-color: @general-input-background-color;
 	color: @general-input-color;
 	border: @general-input-border-width @general-input-border-style @general-input-border-color;
+}
+
+textarea,
+div.body-content textarea {
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 input:hover,
@@ -461,9 +432,9 @@ input[type=checkbox] + div.radio-checkbox-dummy {
 	border-radius: @general-input-border-radius;
 	-moz-border-radius: @general-input-border-radius;
 	-webkit-border-radius: @general-input-border-radius;
-	background: @radio-button-checkbox-background-color url("../images/buttons.png") no-repeat center top;
+	background: @radio-button-checkbox-background-color @radio-buttons-checkbox-background-image no-repeat center -10000000px;
 	border: @general-input-border-width @general-input-border-style @general-input-border-color;
-	background-size: 300px
+	background-size: @icons-sprite-background-size;
 }
 
 input[type=radio]:hover + div.radio-checkbox-dummy,
@@ -698,9 +669,8 @@ div.body-content span.form-required {
 	color: @general-asterisk-color;	
 	font-size: @general-asterisk-font-size;
 	font-weight: @general-asterisk-font-weight;
-	line-height: @general-asterisk-font-size - 10px;
+	line-height: @general-asterisk-font-size;
 	font-family: Arial, Helvetica, sans-serif;
-	
 }
 
 

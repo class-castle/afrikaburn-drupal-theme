@@ -34,7 +34,7 @@ div.form-wrapper .form-item > label {
 	font-weight: 400;
 
 }
-
+.form-item span.field-suffix,
 .form-item .description {
 	padding-left: 15px;
 	margin: 10px 0 10px 10px;
@@ -42,9 +42,15 @@ div.form-wrapper .form-item > label {
 	border-left: 3px solid #f26c55;
 	color: #f26c55;
 	font-size: 0.9em;
+	text-align: justify;
+	padding-right: 15px;
 }
 .form-radios + .description {
 	margin-top: 10px;
+}
+
+div.fieldset-description {
+	text-align: justify;
 }
 
 div.form-managed-file {
@@ -127,3 +133,9 @@ form#user-register-form div#edit-actions {
 div.form-textarea-wrapper div.grippie {
 	display: none;
 }
+/*div.body-content input.error,
+div.body-content input[type=radio].error + div.radio-checkbox-dummy,
+div.body-content textarea.error {
+	background-color: #ED989B;
+	border-color: #AB3236;
+}*/

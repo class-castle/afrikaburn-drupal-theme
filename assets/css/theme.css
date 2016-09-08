@@ -374,20 +374,6 @@ div.block-outer {
   width: 100%;
   float: left;
 }
-/*---------------SEARCH BOX STATIC----------------*/
-div.moduletable.smart-search {
-  display: block;
-}
-div.moduletable.smart-search div.finder.smart-search button {
-  /*site-button*/
-  background-position: left 48% bottom -58px;
-  float: left;
-}
-div.moduletable.smart-search div.finder.smart-search button:hover {
-  /*site-button-hover*/
-  background-position: left 48% bottom -58px;
-  float: left;
-}
 body.contentpane {
   padding-bottom: 0;
 }
@@ -530,35 +516,6 @@ div.body-content p {
   line-height: 170%;
   margin-bottom: 1em;
 }
-/*button,
-div.body-content button,
-input.button,
-div.body-content input.button,
-.btn,
-div.body-content .btn,
-.btn-primary,
-div.body-content .btn-primary,
-a.btn,
-div.body-content a.btn {
-	width: @general-button-width;
-	max-width: @general-button-max-width;
-	background: @general-button-background-color @general-button-background-image @general-button-background-repeat @general-button-background-position;
-	*background-color: @general-button-background-color;
-	background-size: @general-button-background-size;
-	height: @general-button-height;
-	border: @general-button-border-width @general-button-border-style @general-button-border-color;
-	border-radius: @general-button-border-radius;
-	-moz-border-radius: @general-button-border-radius;
-	-webkit-border-radius: @general-button-border-radius;
-	box-shadow: none;
-	color: transparent;
-	font-size: 0;
-	cursor: pointer;
-	float: left;
-	display: block;
-	padding: 0;
-	box-sizing: border-box;	
-}*/
 button,
 .button,
 input.button,
@@ -571,7 +528,6 @@ div.body-content input[type=submit] {
   max-width: 400px;
   min-width: 200px;
   background-color: #000000;
-  /*@general-button-background-image no-repeat @general-button-background-position;*/
   *background-color: #000000;
   height: 45px;
   border-width: 0;
@@ -611,8 +567,7 @@ div.body-content a.btn:hover,
 div.input-file-wrapper:hover,
 input[type=submit]:hover,
 div.body-content input[type=submit]:hover {
-  background: #191919 url(../images/buttons.png) repeat center top;
-  background-size: 300px;
+  background: #191919;
   height: 45px;
   color: #f26c55;
   cursor: pointer;
@@ -644,8 +599,7 @@ div.body-content select {
   background-color: #f5f5f5;
   background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   font-family: Arial, Helvetica, sans-serif;
-  /*clear: both;
-	float: left;*/
+  display: block;
   margin-top: 10px;
 }
 div.body-content select option {
@@ -688,13 +642,16 @@ div.body-content .uneditable-input {
   margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
-  padding: 2px 0px;
-  /*float: @general-input-float;*/
-  text-indent: 8px;
+  padding: 2px 15px;
   box-sizing: border-box;
   background-color: #ffffff;
   color: #333333;
   border: 2px solid #cccccc;
+}
+textarea,
+div.body-content textarea {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 input:hover,
 textarea:hover,
@@ -724,7 +681,7 @@ div.body-content .uneditable-input {
 div.body-content input:hover,
 div.body-content .uneditable-input:hover,
 div.body-content textarea:hover {
-  border-color: #af282d;
+  border-color: #f26c55;
 }
 div.body-content input:focus,
 div.body-content input[type="text"]:focus,
@@ -751,8 +708,8 @@ div.body-content textarea:focus {
   -moz-box-shadow: inherit;
   box-shadow: inherit;
   outline: 0;
-  border-color: #af282d;
-  background-color: #e6cccf;
+  border-color: #f26c55;
+  background-color: #f5e6e4;
 }
 textarea,
 textarea:focus,
@@ -808,20 +765,20 @@ input[type=checkbox] + div.radio-checkbox-dummy {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  background: #ffffff url("../images/buttons.png") no-repeat center top;
+  background: #ffffff url("../images/afrikaburn-icons.png") no-repeat center -10000000px;
   border: 2px solid #cccccc;
-  background-size: 300px;
+  background-size: 200px;
 }
 input[type=radio]:hover + div.radio-checkbox-dummy,
 input[type=checkbox]:hover + div.radio-checkbox-dummy {
   border-color: #aaaaaa;
-  background-color: #e6cccf;
+  background-color: #f26c55;
 }
 input[type=radio]:checked + div.radio-checkbox-dummy,
 input[type=checkbox]:checked + div.radio-checkbox-dummy {
-  background-position: center bottom -217px;
+  background-position: center -152px;
   border-color: #888888;
-  background-color: #962738;
+  background-color: #f26c55;
 }
 div.body-content input[type=radio] + div.radio-checkbox-dummy,
 div.body-content input[type=checkbox] + div.radio-checkbox-dummy {
@@ -829,13 +786,13 @@ div.body-content input[type=checkbox] + div.radio-checkbox-dummy {
 }
 div.body-content input[type=radio]:hover + div.radio-checkbox-dummy,
 div.body-content input[type=checkbox]:hover + div.radio-checkbox-dummy {
-  border-color: #af282d;
+  border-color: #f26c55;
 }
 div.body-content input[type=radio]:checked + div.radio-checkbox-dummy,
 div.body-content input[type=checkbox]:checked + div.radio-checkbox-dummy {
-  background-position: center bottom -217px;
-  border-color: #af282d;
-  background-color: #962738;
+  background-position: center -152px;
+  border-color: #f26c55;
+  background-color: #f26c55;
 }
 div.body-content table {
   border: 1px solid #888888;
@@ -997,7 +954,7 @@ div.body-content span.form-required {
   color: #f26c55;
   font-size: 25px;
   font-weight: 400;
-  line-height: 15px;
+  line-height: 25px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .transparent {
@@ -1033,8 +990,8 @@ a.edit-item {
 div.back-to-top-button,
 a.back-to-top-button {
   opacity: 0;
-  height: 36px;
-  width: 36px;
+  height: 30px;
+  width: 30px;
   padding: 3px;
   background-color: #000000;
   position: fixed;
@@ -1042,9 +999,9 @@ a.back-to-top-button {
   right: 20px;
   z-index: 9999999999;
   border: 2px solid #ffffff;
-  border-radius: 42px;
-  -webkit-border-radius: 42px;
-  -moz-border-radius: 42px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   overflow: hidden;
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
@@ -1061,10 +1018,10 @@ a.back-to-top-button.show {
   transition: all 800ms ease;
 }
 a.back-to-top-button span {
-  background: url(../images/buttons.png) no-repeat center bottom -5px;
-  background-size: 300px;
-  height: 36px;
-  width: 36px;
+  background: url("../images/afrikaburn-icons.png") no-repeat right 4px top -42px;
+  background-size: 200px;
+  height: 30px;
+  width: 30px;
   display: block;
 }
 a.back-to-top-button span:hover {
@@ -1457,7 +1414,7 @@ DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
   .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > span.separator,
   .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active > a {
     color: #dddddd;
-    background: #0d0d0d url(../images/buttons.png) no-repeat right 8px bottom -150px;
+    background: #0d0d0d url("../images/afrikaburn-icons.png") no-repeat right 8px bottom -150px;
     background-size: 300px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -1466,7 +1423,7 @@ DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
   }
   .navbar .navbar-inner .nav-collapse ul.menu li ul.menu li.active div.mobile-active-1 {
     background-color: transparent;
-    background-image: url(../images/buttons.png);
+    background-image: url("../images/afrikaburn-icons.png");
     background-position: right 8px bottom -150px;
     background-size: 300px;
     background-repeat: no-repeat;
@@ -1507,107 +1464,6 @@ DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
     border-left: 0px solid transparent;
     content: '';
   }
-}
-.moduletable.user-greeting {
-  float: right;
-}
-div#user-greeting {
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-div#user-greeting:hover {
-  cursor: pointer;
-}
-/*Display of user's name*/
-.moduletable.user-greeting div.users-name {
-  float: left;
-}
-.moduletable.user-greeting #login-form .logout-button {
-  display: none;
-}
-.moduletable.user-greeting #login-form .login-greeting {
-  color: #999999;
-  text-align: left;
-  margin-right: 7px;
-  text-transform: none;
-  font-weight: 400;
-  font-style: normal;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.4em;
-}
-div#user-greeting:hover #login-form .login-greeting {
-  color: #666666;
-}
-/*---Hamburger icon next to user's name---*/
-div.user-menu-icon {
-  float: left;
-  margin-top: 2px;
-  cursor: pointer;
-  padding-top: 2px;
-}
-div.user-menu-icon span.icon-bar {
-  display: block;
-  height: 2px;
-  background-color: #999999;
-  border-radius: 2px;
-}
-div#user-greeting:hover div.user-menu-icon span.icon-bar {
-  background-color: #666666;
-}
-div.user-menu-icon span.icon-bar + span.icon-bar {
-  margin-top: 2px;
-}
-/*---User actions pop out box---*/
-div.user-block {
-  float: right;
-  margin: 0 0 0 0;
-}
-div.user-actions {
-  float: right;
-  max-height: 0;
-  overflow: hidden;
-}
-div.show-actions div.user-actions {
-  max-height: 1000px;
-  -webkit-transition: max-height 0.5s ease-in;
-  -moz-transition: max-height 0.5s ease-in;
-  -ms-transition: max-height 0.5s ease-in;
-  -o-transition: max-height 0.5s ease-in;
-  transition: max-height 0.5s ease-in;
-}
-div.user-popout-inner {
-  padding: 15px;
-  background-color: #f0f0f0;
-}
-/*--User Actions Links---*/
-div.user-actions ul.nav {
-  margin-bottom: 0;
-}
-div.user-actions ul.nav li {
-  margin-bottom: 5px;
-}
-div.user-actions ul.nav li a {
-  text-decoration: none;
-  color: #999999;
-  font-size: 1.3em;
-  font-weight: 600;
-}
-div.user-actions ul.nav li a:hover {
-  text-decoration: none;
-  color: #666666;
-}
-/*---Logout Button---*/
-div.user-actions div.moduletable.logout-link {
-  float: left;
-}
-div.user-actions div.logout-button input.btn {
-  background-position: center -60px;
-  margin-top: 10px;
-  width: 120px;
-  max-width: 120px;
-}
-div.user-actions div.logout-button input.btn span {
-  display: none;
 }
 /*----------------------------------------------------------
 SOCIAL MEDIA LINKS
@@ -1677,139 +1533,6 @@ p.sm-link.pinterest a:hover {
   background-color: #cb2027;
   background-position: center -120px;
 }
-div.moduletable.smart-search label {
-  display: none;
-}
-div.moduletable.smart-search form#mod-finder-searchform {
-  margin-top: 0;
-  padding-bottom: 10px;
-  position: relative;
-}
-div.moduletable.smart-search div.finder.smart-search {
-  overflow: visible;
-  float: left;
-  line-height: 0;
-  width: 100%;
-}
-div.moduletable.smart-search div.finder.smart-search input {
-  max-width: 200px;
-  padding-left: 30px;
-  margin: 0;
-}
-div.moduletable.smart-search div.finder.smart-search button {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 30px;
-  margin: 0;
-  -webkit-border-top-right-radius: 0;
-  -moz-border-radius-topright: 0;
-  border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
-  -moz-border-radius-bottomright: 0;
-  border-bottom-right-radius: 0;
-  background-color: transparent;
-  border-width: 0;
-}
-div.moduletable.smart-search div.finder.smart-search button i {
-  display: none;
-}
-ul.autocompleter-choices {
-  background-color: #ffffff;
-  border-color: #cccccc;
-  border-width: 2px;
-  border-style: solid;
-  font-size: 1.5em;
-  -moz-border-radius-bottomleft: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top: none;
-  margin-top: -2px;
-  margin-left: 1px;
-  display: none;
-  z-index: 99999999999 !important;
-  width: inherit !important;
-}
-div.autocomplete-suggestions {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-}
-div.autocomplete-suggestions div.autocomplete-suggestion {
-  color: #999999;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.4em;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  border-bottom: 1px solid #cccccc;
-  background-color: transparent;
-}
-div.autocomplete-suggestions div.autocomplete-suggestion:hover {
-  background-color: #f5f5f5;
-  cursor: pointer;
-}
-div.autocomplete-suggestions div.autocomplete-suggestion:last-child {
-  border-width: 0;
-}
-div.autocomplete-suggestions div.autocomplete-suggestion strong {
-  color: #f26c55;
-}
-form#mod-finder-searchform i.icon-search,
-form#mod-finder-searchform span.icon-search {
-  display: none;
-}
-@media (min-width: 980px) {
-  div.moduletable.smart-search {
-    float: left;
-    width: 200px;
-    margin: 8px 0 8px 0;
-  }
-}
-@media (max-width: 979px) {
-  div#search-container {
-    border-top: 1px solid #000000;
-    background-color: #261717;
-  }
-  div#search-container div.moduletable.smart-search {
-    float: left;
-    width: 200px;
-    margin: 8px 0 8px 20px;
-  }
-}
-div#login-block {
-  max-height: 0;
-  overflow: hidden;
-}
-body.placeholders-supported form#login-form #form-login-username label,
-body.placeholders-supported form#login-form #form-login-password label {
-  display: none;
-}
-div#login-block.show-login {
-  max-height: 1000px;
-  -webkit-transition: max-height 0.5s ease-in;
-  -moz-transition: max-height 0.5s ease-in;
-  -ms-transition: max-height 0.5s ease-in;
-  -o-transition: max-height 0.5s ease-in;
-  transition: max-height 0.5s ease-in;
-}
-div#login-block form#login-form input.button {
-  margin-bottom: 15px;
-  background-position: center -10px;
-}
-div#login-block form#login-form #form-login-remember label {
-  color: #999999;
-}
-div#login-block form#login-form ul.helpLinks li {
-  list-style: none;
-  font-size: 1.3em;
-  margin-left: 0;
-  padding-left: 0;
-}
-div#login-block form#login-form ul.helpLinks li a {
-  text-decoration: none;
-}
 /*------------------------------------------------
 DESKTOP MAIN-NAV LEVEL 3 (ANIMATED DROPDOWN MENU)
 ------------------------------------------------*/
@@ -1849,7 +1572,7 @@ DESKTOP MAIN-NAV LEVEL 3 (ANIMATED DROPDOWN MENU)
 SYSTEM MESSAGE STYLES
 -------------------*/
 div.messages {
-  padding: 15px 15px 15px 45px;
+  padding: 12px 15px 12px 38px;
   margin-bottom: 20px;
   position: relative;
   line-height: 150%;
@@ -1859,6 +1582,21 @@ div.messages {
   text-align: justify;
   font-weight: 400;
   text-align: left;
+}
+div.messages span.icon {
+  width: 24px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 15px;
+  background-image: url("../images/afrikaburn-icons.png");
+  background-repeat: no-repeat;
+  background-position: left -40px top -50px;
+  background-size: 200px;
+}
+div.messages.status span.icon {
+  background-position: left 0px top -50px;
 }
 div.messages .element-invisible {
   display: none;
@@ -2120,7 +1858,7 @@ DEFAULT MENU MOBILE STYLES LEVEL 1
     cursor: default;
   }
   .navbar .navbar-inner .nav-collapse aside > ul.menu li ul.menu li.active.current > a {
-    background-image: url(../images/buttons.png);
+    background-image: url("../images/afrikaburn-icons.png");
     background-repeat: no-repeat;
     background-position: right 10px bottom -155px;
     background-size: 300px;
@@ -2201,9 +1939,6 @@ DEFAULT MENU MOBILE STYLES LEVEL 2
     width: 40px;
     height: 36px;
   }
-  span.trash {
-    color: yes;
-  }
 }
 @media (max-width: 979px) {
   .show-below-979px {
@@ -2262,8 +1997,8 @@ DEFAULT MENU MOBILE STYLES LEVEL 2
   h2,
   h3,
   h4 {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .container-2 {
     padding: 36px 0px 0px;
@@ -2273,7 +2008,7 @@ DEFAULT MENU MOBILE STYLES LEVEL 2
   }
   div.body-content,
   #main-content-strip div.body-content {
-    padding: 20px 10px 20px;
+    padding: 20px 20px 20px;
   }
 }
 @media (max-width: 479px) {
@@ -2325,8 +2060,8 @@ DEFAULT MENU MOBILE STYLES LEVEL 2
   h2,
   h3,
   h4 {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .container-2 {
     padding-left: 36px 0px 36px;
@@ -2336,7 +2071,7 @@ DEFAULT MENU MOBILE STYLES LEVEL 2
   }
   div.body-content,
   #main-content-strip div.body-content {
-    padding-top: 20px 10px 20px;
+    padding-top: 20px 20px 20px;
   }
 }
 /***All of these styles relate to markup generated by Drual***/
@@ -2366,6 +2101,7 @@ div.form-wrapper .form-item > label {
   margin: 0;
   font-weight: 400;
 }
+.form-item span.field-suffix,
 .form-item .description {
   padding-left: 15px;
   margin: 10px 0 10px 10px;
@@ -2373,9 +2109,14 @@ div.form-wrapper .form-item > label {
   border-left: 3px solid #f26c55;
   color: #f26c55;
   font-size: 0.9em;
+  text-align: justify;
+  padding-right: 15px;
 }
 .form-radios + .description {
   margin-top: 10px;
+}
+div.fieldset-description {
+  text-align: justify;
 }
 div.form-managed-file {
   margin-top: 10px;
@@ -2442,6 +2183,12 @@ form#user-register-form div#edit-actions {
 div.form-textarea-wrapper div.grippie {
   display: none;
 }
+/*div.body-content input.error,
+div.body-content input[type=radio].error + div.radio-checkbox-dummy,
+div.body-content textarea.error {
+	background-color: #ED989B;
+	border-color: #AB3236;
+}*/
 div.banners {
   position: relative;
 }
@@ -2516,7 +2263,17 @@ a.user-link:hover {
   cursor: pointer;
   text-decoration: none;
 }
+input,
+textarea,
+div.body-content input,
+div.body-content textarea {
+  background-image: url("../images/paper-bg.png");
+  background-repeat: repeat;
+}
 @media (min-width: 980px) {
+  #main-content-strip {
+    margin-bottom: 36px;
+  }
   .navbar .navbar-inner .nav-collapse aside > ul.menu > li {
     padding-top: 4px;
     padding-bottom: 4px;
@@ -2562,5 +2319,9 @@ a.user-link:hover {
   a.user-link {
     float: left;
     margin-left: 62px;
+  }
+  div.sidebar-outer,
+  section#footer {
+    display: none;
   }
 }

@@ -224,40 +224,42 @@ global $user;
             </div>
         </div>
     </section>
-    <section id="social-icons">
+    <?php /*
+       <section id="social-icons">
             <div class='container-2'>
                 <?php print render($page['social']); ?>
             </div>
-        </section>
-        <section id="footer">
-            <div class='container-2'>
-                <div class='container-1'>
-                    <h2>Volunteer now!</h2>
-                    <div class='body-content'>
+        </section> 
+    */ ?>
+    <section id="footer">
+        <div class='container-2'>
+            <div class='container-1'>
+                <h2>Volunteer now!</h2>
+                <div class='body-content'>
 
-                        <div class="blocks-container footer three-column">
-                            <div class='block-outer'>
-                                <div class='block-inner'>
-                                <?php print render($page['footer_left']); ?>
-                                </div>
-                            </div>
-                                 <div class='block-outer'>
-                                    <div class='block-inner'>
-                                <?php print render($page['footer_centre']); ?>
-                                </div>
-                            </div>
-                                 <div class='block-outer'>
-                                    <div class='block-inner'>
-                                    <div class="fb-page" data-href="https://www.facebook.com/afrikaburn/" data-tabs="timeline" data-height="322" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/afrikaburn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/afrikaburn/">AfrikaBurn</a></blockquote></div>                                </div>
+                    <div class="blocks-container footer three-column">
+                        <div class='block-outer'>
+                            <div class='block-inner'>
+                            <?php print render($page['footer_left']); ?>
                             </div>
                         </div>
-                        <div class='clr'></div>
+                             <div class='block-outer'>
+                                <div class='block-inner'>
+                            <?php print render($page['footer_centre']); ?>
+                            </div>
+                        </div>
+                             <div class='block-outer'>
+                                <div class='block-inner'>
+                                <div class="fb-page" data-href="https://www.facebook.com/afrikaburn/" data-tabs="timeline" data-height="322" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/afrikaburn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/afrikaburn/">AfrikaBurn</a></blockquote></div>                                </div>
+                        </div>
                     </div>
+                    <div class='clr'></div>
                 </div>
             </div>
-        </section>
-        <section id="copyright">
-            <div class="copyright-inner">
-                <?php print render($page['copyright']); ?>
-            </div>
-        </section>
+        </div>
+    </section>
+    <section id="copyright">
+        <div class="copyright-inner">
+            <?php print render($page['copyright']); ?>
+        </div>
+    </section>
