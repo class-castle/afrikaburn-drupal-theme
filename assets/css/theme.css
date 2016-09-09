@@ -2198,6 +2198,9 @@ div.banners div.slide {
   left: 0;
   opacity: 0;
 }
+div.banners img {
+  display: block;
+}
 div.banners div.slide.first {
   opacity: 1;
 }
@@ -2243,6 +2246,12 @@ a.user-link {
   padding: 14px 20px 9px;
   text-transform: uppercase;
   text-decoration: none;
+}
+div.body-content input[type=radio]:hover + div.radio-checkbox-dummy,
+div.body-content input[type=checkbox]:hover + div.radio-checkbox-dummy,
+div.body-content input[type=radio]:checked + div.radio-checkbox-dummy,
+div.body-content input[type=checkbox]:checked + div.radio-checkbox-dummy {
+  border-color: #AF282E;
 }
 @media (max-width: 979px) {
   a.user-link {
