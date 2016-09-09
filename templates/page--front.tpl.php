@@ -121,6 +121,14 @@ global $user;
                         echo "<a class='user-link logout' href='/user/logout'>Logout</a>";
                     }
                 ?>
+                <div class='social-media-links'>
+                    <div class='sm-link twitter'>
+                        <a href='https://www.twitter.com/afrikaburn' title='Afrikaburn on Twitter' target='_blank'></a>
+                    </div>
+                    <div class='sm-link facebook'>
+                        <a href='https://www.facebook.com/afrikaburn' title='Afrikaburn on Facebook' target='_blank'></a>
+                    </div>
+                </div>
         </div>
     </div>
     <div class="container-3 show-below-979px" id="mobile-menu-bar">

@@ -1468,69 +1468,75 @@ DESKTOP MAIN-NAV LEVEL 2 (ANIMATED DROPDOWN MENU)
 /*----------------------------------------------------------
 SOCIAL MEDIA LINKS
 -----------------------------------------------------------*/
-div.sm-links-container.centred {
-  width: 100%;
-  float: left;
+/*div.sm-links-container.centred {
+	width: 100%;
+	float: left;	
 }
+
 div.sm-links-container.centred div.sm-links {
-  float: right;
-  position: relative;
-  right: 50%;
+	float: right;
+	position: relative;
+	right: 50%;	
 }
+
 div.sm-links-container.centred div.sm-links div.sm-links {
+	float: right;
+	position: relative;
+	right: -50%;
+	
+}*/
+div.social-media-links {
   float: right;
-  position: relative;
-  right: -50%;
 }
-p.sm-link {
+div.sm-link {
   height: 40px;
   width: 40px;
   float: left;
-  margin: 5px;
+  margin: 0 5px;
 }
-p.sm-link a:link {
+div.sm-link a:link {
   height: 40px;
   width: 40px;
   display: block;
   color: transparent !important;
   font-size: 0;
-  background: #555555 url("../images/sm-links.png") no-repeat center top;
+  background: transparent url("../images/afrikaburn-sm-icons.png") no-repeat center top;
   background-size: 40px;
   float: left;
   border-radius: 40px;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
 }
-p.sm-link.twitter a:link {
-  background-color: #555555;
+div.sm-link.twitter a:link {
+  background-color: transparent;
   background-position: center top;
 }
-p.sm-link.twitter a:hover {
-  background-color: #58ccff;
-  background-position: center top;
-}
-p.sm-link.facebook a:link {
-  background-color: #555555;
-  background-position: center -40px;
-}
-p.sm-link.facebook a:hover {
-  background-color: #3b5998;
-  background-position: center -40px;
-}
-p.sm-link.instagram a:link {
-  background-color: #555555;
-  background-position: center -80px;
-}
-p.sm-link.instagram a:hover {
-  background-color: #9a7658;
-  background-position: center -80px;
-}
-p.sm-link.pinterest a:link {
-  background-color: #555555;
+div.sm-link.twitter a:hover {
+  background-color: transparent;
   background-position: center -120px;
 }
-p.sm-link.pinterest a:hover {
-  background-color: #cb2027;
+div.sm-link.facebook a:link {
+  background-color: transparent;
+  background-position: center -40px;
+}
+div.sm-link.facebook a:hover {
+  background-color: transparent;
+  background-position: center -160px;
+}
+div.sm-link.instagram a:link {
+  background-color: transparent;
+  background-position: center -80px;
+}
+div.sm-link.instagram a:hover {
+  background-color: transparent;
+  background-position: center -200px;
+}
+div.sm-link.pinterest a:link {
+  background-color: transparent;
+  background-position: center -120px;
+}
+div.sm-link.pinterest a:hover {
+  background-color: transparent;
   background-position: center -120px;
 }
 /*------------------------------------------------
