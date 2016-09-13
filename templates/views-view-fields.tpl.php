@@ -25,4 +25,5 @@
 ?>
 <?php foreach ($fields as $id => $field): ?>
     <?php print $field->content; ?>
+    <p>Test</p>
 <?php endforeach; ?>

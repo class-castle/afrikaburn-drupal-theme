@@ -117,8 +117,10 @@ global $user;
                <?php
                     if (!$logged_in) {
                         echo "<a class='user-link' href='/user/login'>Login</a>";
+                        echo "<a class='user-link' href='/user/register'>Register</a>";
                     } else {
                         echo "<a class='user-link logout' href='/user/logout'>Logout</a>";
+                        echo "<a class='user-link' href='/user'>Bio</a>";
                     }
                 ?>
                 <div class='social-media-links'>

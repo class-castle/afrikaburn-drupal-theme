@@ -97,7 +97,8 @@ a:visited {
 
 a:hover {
 	color: @body-content-link-hover-color;	
-	text-decoration: @body-content-link-hover-text-decoration;	
+	text-decoration: @body-content-link-hover-text-decoration;
+	cursor: pointer;	
 }
 
 a:active {
@@ -870,4 +871,12 @@ div.input-file-wrapper input:hover {
 	cursor: pointer;
 }
 
-
+span.icon {
+	width: 24px;
+	height: 20px;
+	display: block;
+	background-image:  url("../images/afrikaburn-icons.png");
+	background-repeat: no-repeat;
+	background-position: left -40px top -50px;
+	background-size: @icons-sprite-background-size;
+}
